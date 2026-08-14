@@ -40,12 +40,12 @@ with col4:
 col1,col2=st.columns(2)
 with col1:
     st.subheader("Cost Distribution")
-    fig,ax=plt.subplots()
+    fig,ax=plt.subplots(figsize=(10, 5))
     ax.pie(data['Cost'],labels=data['Months'],autopct='%1.1f%%',startangle=90)
     st.pyplot(fig)
 with col2:
     st.subheader("Revenue Distribution")
-    fig,ax=plt.subplots()
+    fig,ax=plt.subplots(figsize=(10, 10))
     ax.bar(data['Months'],data['Revenue'],label='Revenue',color='purple',alpha=0.7)
     ax.set_xlabel('Months')
     ax.set_ylabel('Amount')
